@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">NovopayApp</string>
+    <string name="no_data_message">You don\'t have record for spend amount yet!</string>
+    <string name="please_wait_loading">Please wait...</string>
+</resources>
