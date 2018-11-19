@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/recyclerView"
+    android:clipToPadding="false"
+    android:paddingLeft="@dimen/dp_12"
+    android:paddingStart="@dimen/dp_12"
+    android:paddingEnd="@dimen/dp_12"
+    android:paddingTop="@dimen/dp_12"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center" />

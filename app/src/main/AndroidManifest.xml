@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
 
-        <service android:name=".db.DbService" />
+        <service android:name=".services.DbService" />
     </application>
 
 </manifest>

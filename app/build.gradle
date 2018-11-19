@@ -21,6 +21,12 @@ android {
     dexOptions {
         javaMaxHeapSize "4g"
     }
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        pickFirst 'lib/armeabi-v7a/libassmidi.so'
+        pickFirst 'lib/x86/libassmidi.so'
+        exclude 'META-INF/proguard/androidx-annotations.pro'
+    }
 }
 
 dependencies {
@@ -42,7 +48,7 @@ dependencies {
     annotationProcessor "com.jakewharton:butterknife-compiler:$_butterKnifeVersion"
     implementation 'org.greenrobot:eventbus:3.1.1'
     implementation "com.android.support:support-compat:$_version"
-
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0-alpha'
     //used for database debugging in run time
     implementation 'com.facebook.stetho:stetho:1.5.0'
 

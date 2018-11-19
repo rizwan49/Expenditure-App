@@ -15,6 +15,7 @@ public class MyApplication extends Application {
 
     public void onCreate() {
         super.onCreate();
+        //Stetho : debugging for Room persistence (sql Lite) run time.
         Stetho.initializeWithDefaults(this);
         context = this;
         if (LeakCanary.isInAnalyzerProcess(this)) {

@@ -5,6 +5,8 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <include layout="@layout/loading_view" />
+
     <include layout="@layout/data_view_layout" />
 
     <include layout="@layout/empty_data_layout" />

@@ -1,5 +1,7 @@
 <resources>
-    <string name="app_name">NovopayApp</string>
+    <string name="app_name">Novopay Assignment</string>
     <string name="no_data_message">You don\'t have record for spend amount yet!</string>
     <string name="please_wait_loading">Please wait...</string>
+    <string name="ok">ok</string>
+    <string name="permission_msg">Please allow Novopay Assignment to access your SMS from setting</string>
 </resources>

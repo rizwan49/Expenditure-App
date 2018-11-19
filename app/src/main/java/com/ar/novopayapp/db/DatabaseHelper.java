@@ -4,8 +4,11 @@ import android.arch.persistence.room.Room;
 import android.content.Intent;
 
 import com.ar.novopayapp.MyApplication;
+import com.ar.novopayapp.services.DbService;
 
-
+/***
+ * Singleton DatabaseHelper class
+ */
 public class DatabaseHelper {
 
     private static AppDatabase db;
@@ -14,6 +17,10 @@ public class DatabaseHelper {
     private DatabaseHelper() {
     }
 
+    /***
+     *
+     * @return an instance of AppDatabase
+     */
     public static AppDatabase getInstance() {
         if (db == null) {
             // To make thread safe
@@ -29,8 +36,11 @@ public class DatabaseHelper {
         return db;
     }
 
-    public static void startServiceForSms(){
-        Intent intent = new Intent(MyApplication.getContext(),DbService.class);
+    /***
+     * start this service to fetch sms based on the requirement and load it into database using RoomPersistence
+     */
+    public static void startServiceForSms() {
+        Intent intent = new Intent(MyApplication.getContext(), DbService.class);
         MyApplication.getContext().startService(intent);
     }
 

@@ -16,7 +16,7 @@ public interface DatabaseConstant {
             String READ_STATE = "_readState";
             String TIME_STAMP = "_timeStamp";
             String DATE = "_date";
-            String MONTH ="_month";
+            String MONTH = "_month";
         }
     }
 }
