@@ -114,7 +114,7 @@ public class MainActivity extends BaseActivity {
             showViews(emptyView);
         } else {
             showViews(recyclerView);
-            hideViews(emptyView);
+            hideViews(emptyView, progressBarView);
         }
     }
 

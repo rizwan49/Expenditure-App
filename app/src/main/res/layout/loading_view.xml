@@ -25,6 +25,5 @@
         android:id="@+id/progressBar"
         style="@android:style/Widget.ProgressBar.Horizontal"
         android:layout_width="@dimen/dp_140"
-        android:layout_height="@dimen/dp_4"
-        android:progress="25" />
+        android:layout_height="@dimen/dp_4" />
 </LinearLayout>
