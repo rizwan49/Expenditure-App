@@ -57,7 +57,7 @@ public class DbService extends IntentService {
     @Override
     protected void onHandleIntent(@Nullable Intent intent) {
         fetchAndLoadIntoDb();
-        EventBus.getDefault().post(EventBusAction.SYNC_SUCCESS);
+        EventBus.getDefault().postSticky(EventBusAction.SYNC_SUCCESS);
     }
 
     public static void fetchAndLoadIntoDb() {
@@ -72,10 +72,10 @@ public class DbService extends IntentService {
 
             if (lastRecord == null) {
                 cursor = MyApplication.getContext().getContentResolver().query(mSmsQueryUri, null,
-                        null, null, null);
+                        null, null, DATE);
             } else
                 cursor = MyApplication.getContext().getContentResolver().query(mSmsQueryUri, null,
-                        DATE + " > ? ", new String[]{String.valueOf(lastRecord.getTimeStamp())}, null);
+                        DATE + " > ? ", new String[]{String.valueOf(lastRecord.getTimeStamp())}, DATE);
 
             if (cursor == null) {
                 Log.d(TAG, "cursor is null. uri: " + mSmsQueryUri);
@@ -87,7 +87,7 @@ public class DbService extends IntentService {
             int percentage;
             for (boolean hasData = cursor.moveToFirst(); hasData; hasData = cursor.moveToNext()) {
                 percentage = (++progress * 100) / max;
-                EventBus.getDefault().post(percentage + "");
+                EventBus.getDefault().postSticky(percentage + "");
                 final int id = cursor.getInt(cursor.getColumnIndexOrThrow(ID));
                 final String body = cursor.getString(cursor.getColumnIndexOrThrow(BODY));
                 final String sender_no = cursor.getString(cursor.getColumnIndexOrThrow(ADDRESS));

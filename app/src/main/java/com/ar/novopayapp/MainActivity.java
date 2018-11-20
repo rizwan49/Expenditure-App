@@ -9,10 +9,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
 
-import com.ar.novopayapp.utils.EventBusAction;
 import com.ar.novopayapp.adapters.SmsMoneySpendAdapter;
 import com.ar.novopayapp.modals.DebitedModal;
-import com.ar.novopayapp.utils.ViewDialog;
+import com.ar.novopayapp.utils.EventBusAction;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;

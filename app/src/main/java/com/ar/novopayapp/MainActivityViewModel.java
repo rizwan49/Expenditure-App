@@ -28,7 +28,7 @@ public class MainActivityViewModel extends ViewModel {
     private List<Sms> smsList;
     private List<DebitedModal> debitedModalList;
 
-    MainActivityViewModel() {
+    public MainActivityViewModel() {
         db = DatabaseHelper.getInstance();
         startLoadingSms();
     }
