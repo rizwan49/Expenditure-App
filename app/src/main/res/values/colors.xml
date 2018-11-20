@@ -6,4 +6,5 @@
     <color name="error_bg_color">#DA5F6A</color>
     <color name="dialog_text_color">#ff000000</color>
     <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
 </resources>
