@@ -1,4 +1,4 @@
-# Novopay-Assignment
+# Expenditure-App
 This app will show your daily expenditure based on month wise with graphical representation. Basically it's read from your phone message and store it into local db using Room persistence and show it to you. 
 
 # Steps:
